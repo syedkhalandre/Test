@@ -1,0 +1,20 @@
+<p>hello template </p>
+<%= 1+1 %>
+<br />
+<% target = "world" %>
+<%= "Hello #{target}" %>
+<br />
+<% 2.times do %> 
+	<%= 'syed' %> 
+	<%end %>
+<br />
+<% @array.each do |n| %>
+ <%= n %>
+ <%end%>
+ <p>using href</p>
+ <a href='/demo/index'>goto index</a>
+ <p>using link to</p>
+ <%= link_to('goto index',{:action => 'index'}) %>
+ ID:<%= params[:id] %>
+ ID:<%= @id %><br />
+ page: <%= @page %><br />

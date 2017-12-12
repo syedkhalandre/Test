@@ -1,0 +1,8 @@
+<h1>Demo#index</h1>
+<p>Find me in app/views/demo/index.html.erb</p>
+<p>using href</p>
+<a href="/demo/hello">goto hello</a>
+<p>using link to</p>
+ <%= link_to('goto hello',{:action => 'hello'}) %>
+ <p>using url parameter</p>
+<%= link_to('goto with parameter',{:action => 'hello',:page => 5,:id => 20}) %>
