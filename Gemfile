@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.9'
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.3.13', '< 0.5'
+#gem 'mysql2', '>= 0.3.13', '< 0.5'
 gem 'acts_as_list', '~>0.3.0'
 # Use SCSS for stylesheets
 #gem 'sass-rails', '~> 5.0'
@@ -47,3 +47,10 @@ group :development do
   gem 'spring'
 end
 
+group :deployment do
+gem 'mysql2', '>= 0.3.13', '< 0.5'
+end
+group :production do
+	gem 'pg'
+gem	'rails_12factor'
+end
