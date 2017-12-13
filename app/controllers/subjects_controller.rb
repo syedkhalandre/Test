@@ -3,7 +3,7 @@ class SubjectsController < ApplicationController
   layout "admin" 
 
   before_action :confirm_logged_in
-  
+
   def index
     @subjects = Subject.all
   end
@@ -55,6 +55,7 @@ class SubjectsController < ApplicationController
     flash[:notice] = "Subject '#{subject.name}' Deletedted Successfully"
     redirect_to(:action => 'index')
   end
+
 
  private
 
