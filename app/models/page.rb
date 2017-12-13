@@ -17,9 +17,9 @@ class Page < ActiveRecord::Base
 
   private
 
-  def add_default_parmalink
+  def add_default_permalink    
   if permalink.blank?
-  	seld.permalink = "#{id}-#{name.parameterize}"
+  	self.permalink = "#{id}-#{name.parameterize}"
   end
   end
 

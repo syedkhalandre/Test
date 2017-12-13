@@ -3,9 +3,9 @@ class PagesController < ApplicationController
   layout "admin"
 
   before_action :confirm_logged_in
-  before_action :find_subject
-  def index
-    @pages = @subject.pages.all
+  before_action :find_subject ,only: [:index]
+  def index     
+    @pages = Page.all
   end
 
   def show
@@ -19,8 +19,8 @@ class PagesController < ApplicationController
   end
 
   def create
-    @page = Page.new(page_params)
-    if @page.save
+    @page = Page.new(page_params)    
+    if @page.save(:validate => false)      
       flash[:notice] = "Page created successfully."
       redirect_to(:action => 'index', :subject_id => @subject_id)
     else
