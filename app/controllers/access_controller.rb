@@ -11,6 +11,7 @@ class AccessController < ApplicationController
   def login
     
   end
+  
 
   def attempt_login
     if params[:username].present? && params[:password].present?
